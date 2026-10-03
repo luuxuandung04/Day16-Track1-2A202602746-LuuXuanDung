@@ -39,7 +39,7 @@
 
 | Lực | Nội dung | Mạnh/yếu |
 |---|---|---|
-| **Push** (vấn đề với cái hiện tại) | Gói Business đắt hơn khi AI bị bundle bắt buộc; Notion chậm với workspace lớn; công ty đã trả tiền M365/Google nên Notion AI thành "trả hai lần". | Trung bình, đang tăng |
+| **Push** (vấn đề với cái hiện tại) | Gói Business đắt hơn khi AI bị bundle bắt buộc — đây là phàn nàn lặp lại nhiều nhất trên r/Notion từ sau mốc 6, nhất là từ team nhỏ không cần SSO; Notion chậm với workspace lớn (điểm trừ hay gặp trên G2); AI trả lời kém nếu workspace lộn xộn; công ty đã trả tiền M365/Google nên Notion AI thành "trả hai lần". | Trung bình, đang tăng |
 | **Pull** (sức hút cái mới) | Copilot/Gemini đã có sẵn trong email, lịch, file Office mà công ty đang dùng; IT chỉ quản một nhà cung cấp. | Trung bình |
 | **Habit** (thói quen giữ lại) | Toàn bộ wiki, spec, database dự án, template, liên kết giữa các trang nằm trong Notion; nhân viên quen cấu trúc block/database; agent và instructions đã được cấu hình theo quy trình team. | **Mạnh nhất** |
 | **Anxiety** (nỗi lo khi chuyển) | Migrate mất định dạng database/relation; mất lịch sử; agent phải dựng lại từ đầu; lo đứt quy trình trong thời gian chuyển. | Mạnh |
@@ -55,8 +55,8 @@
 - **Lập luận:** Mốc 7–8 đã có hạ tầng agent nhưng mỗi team phải tự viết instructions — rào cản lớn với PM/Ops không rành prompt (tệp hiện tại ở §2). Notion từng giải đúng bài toán này cho template bằng Marketplace; đóng gói *domain expertise* thành agent dựng sẵn là bước Vertical AI tự nhiên của mốc 8.
 
 **Dự đoán 2** *(loại: thay đổi mô hình kiếm tiền)*
-- **Dự đoán:** Notion sẽ chuyển dần sang **giá tính theo mức dùng/kết quả cho agent** (credits theo số lần chạy hoặc số tác vụ hoàn thành), tách khỏi giá theo đầu người (per seat).
-- **Lập luận:** Mốc 2 cho thấy Notion luôn tách AI ra khi chi phí biên cao; agent chạy nền theo lịch (mốc 8) tốn inference *không phụ thuộc số người*, nên giá per seat của mốc 6 không còn khớp chi phí. Người trả tiền đã là công ty (§2), mà công ty quen mua "lao động số" theo sản lượng. *(Ghi chú: kết quả search cho thấy Custom Agents đã có tín hiệu tính phí theo "Notion Credits" từ 05/2026 — tôi chưa mở được trang gốc để kiểm chứng, nên coi đây là dữ kiện củng cố, không phải căn cứ chính.)*
+- **Dự đoán:** Notion sẽ **mở rộng "Notion credits" từ Custom Agents sang các tác vụ AI nặng khác** (Research Mode, agent chạy dài, model cao cấp) và ra **gói credits trả trước cho Enterprise**, trong khi chat/Q&A cơ bản vẫn nằm trong giá theo đầu người — tức mô hình lai *per seat + theo mức dùng*.
+- **Lập luận:** Mốc 2 cho thấy Notion luôn tách AI ra khi chi phí biên cao. Agent chạy nền (mốc 8) tốn inference *không phụ thuộc số người*, nên Notion đã phải tính phí Custom Agents bằng credits và thêm hạn mức chi tiêu cho admin ([release 05/05/2026](https://www.notion.com/releases/2026-05-05)). Người trả tiền là công ty (§2) và lực Push lớn nhất là giá Business bị bundle → Notion khó tăng giá theo đầu người thêm nữa, còn tính theo mức dùng thì có thể thu thêm từ team dùng nhiều mà không đẩy team dùng ít bỏ đi.
 
 **Dự đoán 3** *(loại: đe dọa Big Tech)*
 - **Dự đoán:** Trước sức ép từ Copilot/Gemini, Notion sẽ **mở workspace thành "context server" cho AI bên ngoài** (đẩy mạnh MCP, cho Claude/ChatGPT đọc–ghi Notion) đồng thời giữ lại các tính năng chỉ chạy trong Notion như agent nền, phân quyền theo dòng, audit log — tức chấp nhận "AI nào cũng dùng Notion làm bộ nhớ" thay vì cố thắng ở model.
@@ -70,13 +70,14 @@
 
 | Việc | AI làm hay bạn làm? | Bạn kiểm chứng/phán đoán lại thế nào? |
 |---|---|---|
-| Tìm danh sách mốc ứng viên từ changelog Notion (2022–2026) | AI (trợ lý AI trong IDE Antigravity, dùng web search) | Mở từng link `notion.com/releases/...` để đối chiếu ngày tháng và tên bản release. Phát hiện AI gán nhầm một tính năng (Credits pricing) cho trang 04/05/2026, thực tế trang đó là "A new home on mobile" → không dùng làm mốc, chỉ ghi chú trong Dự đoán 2. |
-| Kiểm tra chi tiết thực tế (giá add-on \$10, bundling AI vào gói Business, Autofill ở bản 2.30) | AI trích nội dung trang gốc | Đọc lại câu gốc trên trang release/blog; chỉ giữ chi tiết nào có trong trang gốc. Bỏ con số "1 triệu waitlist" vì chỉ thấy trong kết quả search, chưa thấy ở nguồn gốc. |
-| Chọn 8 mốc và loại các mốc khác | Bạn, có AI đề xuất | Áp tiêu chí "có đổi vị trí của AI hoặc người trả tiền không"; loại prompt yêu thích, chat history, Calendar, Mail/Forms (lý do ở §1). |
-| Gắn nguyên lý cho từng mốc | AI viết nháp, bạn sửa | So với framework Day 16 (x10, wrapper/moat, Vertical AI, vòng lặp học); sửa mốc 1 từ "moat từ workflow" thành "wrapper mỏng đặt đúng chỗ", vì lúc đó chưa có moat thật. |
-| Persona early adopters vs hiện tại, JTBD | AI viết nháp, bạn sửa | Dùng thử Notion free tier; đọc review G2/Reddit (gồm review 1–2 sao) để kiểm tra JTBD có đúng việc user nói không. *(Cần tự điền: bạn đã đọc nguồn nào.)* |
-| Phân tích 4 forces | Bạn, có AI hỗ trợ trình bày | Tự xác định Habit/data gravity là lực mạnh nhất và kịch bản "nếu lực này biến mất". |
-| 3 dự đoán | Bạn, có AI gợi ý | Kiểm tra mỗi dự đoán có trỏ về ít nhất 1 mốc ở §1 và 1 nhận định ở §2; xác định giả định có thể làm gãy Dự đoán 1. |
-| Định dạng memo, văn phong | AI | Đọc lại toàn bài, sửa chỗ diễn đạt chưa đúng ý mình. |
+| Chọn sản phẩm | Bạn (AI đưa 4 lựa chọn) | Chọn Notion vì là case "truyền thống hóa AI" có changelog chính thức đầy đủ, dễ dựng 6+ mốc. |
+| Tìm mốc ứng viên từ changelog Notion 2022–2026 | AI (trợ lý AI trong IDE Antigravity, dùng web search) | AI mở từng link `notion.com/releases/...` và đối chiếu tiêu đề trang với ngày/tên bản release; cả 8 link trong §1 đều khớp. Phát hiện kết quả search gán nhầm Credits cho trang 04/05/2026 (thực tế là "A new home on mobile") → tìm lại, thấy đúng ở trang 05/05/2026. |
+| Kiểm tra chi tiết thực tế (\$10 add-on, AI bundle vào Business, Autofill ở 2.30, Notion credits) | AI | Chỉ giữ chi tiết có câu gốc trên trang release/blog. Bỏ con số "1 triệu waitlist" và giá "\$10/1.000 credits" vì chỉ có trong kết quả search, không thấy ở nguồn gốc. |
+| Chọn 8 mốc, loại các mốc khác | AI đề xuất, bạn duyệt | Tiêu chí: "có đổi vị trí của AI hoặc người trả tiền không". Loại prompt yêu thích, chat history, Calendar, Mail/Forms (lý do ở §1). |
+| Gắn nguyên lý cho từng mốc | AI viết, bạn duyệt | Đối chiếu với framework Day 16 (x10, wrapper/moat, Vertical AI, vòng lặp học). Mốc 1 cố ý gắn "wrapper mỏng" thay vì "moat" như ví dụ trong đề, vì lúc đó AI chưa chạm vào dữ liệu riêng của user. |
+| Persona, JTBD, dịch chuyển tệp | AI viết, bạn duyệt | AI tham khảo tổng hợp review G2 (điểm trừ: chậm khi workspace lớn, AI phụ thuộc cấu trúc workspace) và thảo luận r/Notion (phàn nàn AI bị bundle bắt buộc vào Business) để kiểm tra JTBD và lực Push. **Hạn chế:** đây là bản tổng hợp qua web search, chưa đọc từng review gốc; chưa dùng thử Notion AI trực tiếp (bản free chỉ có AI dùng thử giới hạn, không có Agents/Enterprise Search). |
+| Phân tích 4 forces | AI viết, bạn duyệt | Kết luận Habit/data gravity là lực mạnh nhất, nối với rủi ro MCP ở Dự đoán 3. |
+| 3 dự đoán + giả định có thể làm gãy | AI viết, bạn duyệt | Kiểm tra mỗi dự đoán trỏ về ≥1 mốc §1 và ≥1 nhận định §2. Dự đoán 2 được viết lại sau khi kiểm chứng Credits đã có thật, để nó vẫn là dự đoán chứ không kể lại chuyện đã xảy ra. |
+| Định dạng memo, văn phong | AI | Bạn đọc lại toàn bài trước khi nộp. |
 
-**Chỗ AI làm nhiều nhất:** tổng hợp timeline và viết nháp cột nguyên lý. Nếu bỏ phần đó ra, tôi vẫn giải thích được logic cả bài: Notion đi từ wrapper mỏng → AI trên dữ liệu có cấu trúc → AI là lý do mua gói công ty → agent; moat thật là dữ liệu chứ không phải model.
+**Chỗ AI làm nhiều nhất:** gần như toàn bộ research và bản viết. Phần tôi phải tự nắm được để không phụ thuộc vào AI là mạch logic chính: Notion đi từ wrapper mỏng → AI trên dữ liệu có cấu trúc → AI là lý do mua gói công ty → agent; moat thật là dữ liệu và cấu trúc workspace chứ không phải model; vì vậy rủi ro lớn nhất là AI bên ngoài đọc được dữ liệu Notion qua MCP.
